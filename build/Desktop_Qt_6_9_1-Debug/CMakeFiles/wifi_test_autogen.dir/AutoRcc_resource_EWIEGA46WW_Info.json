@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/wifi_test_autogen",
+	"CMAKE_BINARY_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test",
+	"CMAKE_SOURCE_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/wifi_test_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/wifi2.png"
+	],
+	"LOCK_FILE" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/wifi_test_autogen.dir/AutoRcc_resource_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resource" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resource.cpp",
+	"RCC_EXECUTABLE" : "/home/warrior-of-solitude/Linux_apps/Qt/6.9.1/gcc_64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/wifi_test_autogen.dir/AutoRcc_resource_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/resource.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}
