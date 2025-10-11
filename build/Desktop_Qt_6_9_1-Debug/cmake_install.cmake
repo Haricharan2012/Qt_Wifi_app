@@ -1,4 +1,4 @@
-# Install script for directory: /home/warrior-of-solitude/Documents/linux_app_dev/wifi_test
+# Install script for directory: /home/warrior-of-solitude/Documents/linux_app_dev/wifi_test_3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,21 +43,21 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/wifi_test")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test_3/build/Desktop_Qt_6_9_1-Debug/wifi_test_3")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3"
          OLD_RPATH "/home/warrior-of-solitude/Linux_apps/Qt/6.9.1/gcc_64/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test")
+      execute_process(COMMAND "/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/wifi_test_3")
     endif()
   endif()
 endif()
@@ -77,6 +77,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test/build/Desktop_Qt_6_9_1-Debug/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/warrior-of-solitude/Documents/linux_app_dev/wifi_test_3/build/Desktop_Qt_6_9_1-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
