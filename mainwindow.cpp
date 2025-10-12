@@ -74,7 +74,7 @@ void MainWindow::on_pushButton_2_clicked()
      QMessageBox::information(this, "wifi-notify" ,outxx);
 
 
-
+ // try your best
 
 
    //  proc1.start("gedit",QStringList()<<"go.txt");
