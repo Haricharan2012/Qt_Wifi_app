@@ -4,7 +4,7 @@
 #include "QDebug"
 #include "stdlib.h"
 #include "QProcess"
-#include "conio.h"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -46,6 +46,7 @@ void MainWindow::on_pushButton_2_clicked()
    // proc1.start("nmcli", QStringList()<<"dev wifi connect" <<ssix << "password" << passix ");
 
     QStringList args;
+    char outxx[100];
 
 
     args <<"dev" << "wifi" << "connect" <<ssix << "password" << passix;
@@ -54,12 +55,23 @@ void MainWindow::on_pushButton_2_clicked()
 
     proc1.waitForFinished();
 
-    QString out=proc1.readAllStandardOutput();
 
-     //std::string outx  = out.toStdString();
 
-     cout<<endl<<out.toStdString();
-    // QMessageBox::information(this, "wifi-notify" ,outx);
+   // proc1.start("nmcli device status");
+   // proc1.waitForFinished();
+
+     QString out=proc1.readAllStandardError();    //reports only error and read allstandard output report only succes output
+
+    // out=proc1.readAllStandardOutput();
+
+     std::string outst  = out.toStdString();
+
+     const char* outx=outst.c_str();
+
+     sprintf(outxx,"%s",outx);
+
+     //cout<<endl<<out.toStdString();
+     QMessageBox::information(this, "wifi-notify" ,outxx);
 
 
 
