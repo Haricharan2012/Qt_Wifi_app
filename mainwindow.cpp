@@ -1,8 +1,12 @@
+
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QMessageBox"
 #include "QDebug"
 #include "stdlib.h"
+#include "stdio.h"
+#include "QProcess"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,6 +27,11 @@ void MainWindow::on_pushButton_2_clicked()
     QString ssid= ui->lineEdit->text();
     QString pass= ui->lineEdit_2->text();
 
+    QProcess proc1;
+
+    FILE * flpt;
+
+
 
 
 
@@ -37,19 +46,104 @@ void MainWindow::on_pushButton_2_clicked()
     const char* passix= passtx.c_str();
 
 
-    qDebug("dodo");
+
+    flpt = fopen("wifi.sh", "w+");   // open a file in  reading mode?
+
+    system("chmod u+x wifi.sh");
+
+    if(flpt==NULL)
+    {
+        qDebug() << "file not opened";
+    }
+
+    else
+    {
+
+     //   printf("\n enter the wifi ssid");
+       // scanf("%s",ssid);
+
+       // printf("\n enter the wifi password");
+       // scanf("%s",pass);
+
+        qDebug() << "\n file opened";
+
+        /* fputs(texdata,flpt);  // put data inside file where the pointer is pointing to
+      fputs("\n",flpt);   */
+
+        fprintf(flpt,"#!/usr/bin/bash\n");
+        fprintf(flpt,"echo \"Enabling wifi connection\" \n ");
+        fprintf(flpt,"nmcli dev wifi connect \"%s\" password \"%s\" \n ",ssix,passix);
+
+
+        fclose(flpt);
+        printf("\ndata is written successfully");
+        printf("\nfile is now closed");
+        system("./wifi.sh");
+    }
+
+}
+
+
+
+
+  /* // proc1.start("nmcli", QStringList()<<"dev wifi connect" <<ssix << "password" << passix ");
+
+    QStringList args;
+    char outxx[100];
+
+
+    args <<"dev" << "wifi" << "connect" <<ssix << "password" << passix;
+
+    proc1.start("nmcli",args);
+
+    proc1.waitForFinished();
+
+
+
+   // proc1.start("nmcli device status");
+   // proc1.waitForFinished();
+
+     QString out=proc1.readAllStandardError();    //reports only error and read allstandard output report only succes output
+
+    // out=proc1.readAllStandardOutput();
+
+     std::string outst  = out.toStdString();
+
+     const char* outx=outst.c_str();
+
+     sprintf(outxx,"%s",outx);
+
+     //cout<<endl<<out.toStdString();
+     QMessageBox::information(this, "wifi-notify" ,outxx);  */
+
+
+ // try your best
+
+
+   //  proc1.start("gedit",QStringList()<<"go.txt");
+
+    // proc1.waitForFinished();
+
+
+    //system("gedit");
+
+
+
+
+   /* qDebug("dodo");
     qDebug("%s",passtx);
 
    // sprintf(temp,"%s",ssid);
    // sprintf(sim,"%s",pass);
 
+  //you are my friend
 
     //char ssid[10] = ui->lineEdit->text();
 
 
     char fincmd[100];
 
-   QMessageBox::information(this, "wifi-notify" , "establishing connection");
+   QMessageBox::information(this, "wifi-notify" , "ing connection");
 
 
    //-----------------string crt --------------------------------//
@@ -58,9 +152,7 @@ void MainWindow::on_pushButton_2_clicked()
 
    QMessageBox::information(this, "wifi-notifyx" ,fincmd);
 
-    system(fincmd);
-
-}
+    system(fincmd); */
 
 
 void MainWindow::on_pushButton_clicked()
