@@ -1,8 +1,10 @@
+
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QMessageBox"
 #include "QDebug"
 #include "stdlib.h"
+#include "stdio.h"
 #include "QProcess"
 
 
@@ -27,6 +29,8 @@ void MainWindow::on_pushButton_2_clicked()
 
     QProcess proc1;
 
+    FILE * flpt;
+
 
 
 
@@ -43,7 +47,46 @@ void MainWindow::on_pushButton_2_clicked()
 
 
 
-   // proc1.start("nmcli", QStringList()<<"dev wifi connect" <<ssix << "password" << passix ");
+    flpt = fopen("wifi.sh", "w+");   // open a file in  reading mode?
+
+    system("chmod u+x wifi.sh");
+
+    if(flpt==NULL)
+    {
+        qDebug() << "file not opened";
+    }
+
+    else
+    {
+
+     //   printf("\n enter the wifi ssid");
+       // scanf("%s",ssid);
+
+       // printf("\n enter the wifi password");
+       // scanf("%s",pass);
+
+        qDebug() << "\n file opened";
+
+        /* fputs(texdata,flpt);  // put data inside file where the pointer is pointing to
+      fputs("\n",flpt);   */
+
+        fprintf(flpt,"#!/usr/bin/bash\n");
+        fprintf(flpt,"echo \"Enabling wifi connection\" \n ");
+        fprintf(flpt,"nmcli dev wifi connect \"%s\" password \"%s\" \n ",ssix,passix);
+
+
+        fclose(flpt);
+        printf("\ndata is written successfully");
+        printf("\nfile is now closed");
+        system("./wifi.sh");
+    }
+
+}
+
+
+
+
+  /* // proc1.start("nmcli", QStringList()<<"dev wifi connect" <<ssix << "password" << passix ");
 
     QStringList args;
     char outxx[100];
@@ -71,7 +114,7 @@ void MainWindow::on_pushButton_2_clicked()
      sprintf(outxx,"%s",outx);
 
      //cout<<endl<<out.toStdString();
-     QMessageBox::information(this, "wifi-notify" ,outxx);
+     QMessageBox::information(this, "wifi-notify" ,outxx);  */
 
 
  // try your best
@@ -110,8 +153,6 @@ void MainWindow::on_pushButton_2_clicked()
    QMessageBox::information(this, "wifi-notifyx" ,fincmd);
 
     system(fincmd); */
-
-}
 
 
 void MainWindow::on_pushButton_clicked()
