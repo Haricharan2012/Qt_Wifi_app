@@ -89,6 +89,8 @@ This application was designed as part of an embedded system for:
 ## 📷 Screenshots
 
 *Add UI screenshots here*
+<img width="452" height="254" alt="wificl" src="https://github.com/user-attachments/assets/f13846f3-1a8a-4105-88e7-6b73998b0869" />
+
 
 ---
 
