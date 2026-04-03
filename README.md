@@ -125,6 +125,7 @@ This application was designed as part of an embedded system for:
 **R. Haricharan**
 🔗 GitHub: [https://github.com/Haricharan2012](https://github.com/Haricharan2012)
 
+---
 
 ## 📹 Video
 
