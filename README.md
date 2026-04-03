@@ -114,9 +114,9 @@ This application was designed as part of an embedded system for:
 
 ## 📚 References
 
-* Qt Documentation
-* nmcli (Network Manager CLI)
-* Raspberry Pi Documentation
+* Qt Documentation: https://doc.qt.io/qt-6/
+* nmcli (Network Manager CLI): https://networkmanager.dev/docs/api/latest/nmcli.html
+* Raspberry Pi Documentation: https://www.raspberrypi.com/documentation/
 
 ---
 
